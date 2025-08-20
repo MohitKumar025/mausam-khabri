@@ -1,0 +1,127 @@
+body, h1, h2, p, input, button {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(135deg, #56DFCF 0%, #eeede7 100%);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 18px;
+    box-shadow: 0 8px 32px rgba(44, 62, 80, 0.15);
+    padding: 2.5rem 2rem;
+    width: 350px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 2.2rem;
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    background: linear-gradient(90deg, #74ebd5 0%, #4a90e2 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+}
+
+.input-container {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+    justify-content: center;
+}
+
+input[type="text"] {
+    flex: 1;
+    padding: 0.7rem 1rem;
+    border: 1px solid #bfc9d4;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.2s;
+    outline: none;
+}
+
+input[type="text"]:focus {
+    border-color: #74ebd5;
+}
+
+button {
+    padding: 0.7rem 1.2rem;
+    background: linear-gradient(90deg, #74ebd5 0%, #ACB6E5 100%);
+    border: none;
+    border-radius: 8px;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(44, 62, 80, 0.08);
+    transition: background 0.2s, transform 0.1s;
+}
+
+button:hover {
+    background: linear-gradient(90deg, #ACB6E5 0%, #74ebd5 100%);
+    transform: translateY(-2px) scale(1.03);
+}
+
+#weather-info {
+    margin-top: 1.5rem;
+    animation: fadeIn 0.7s;
+}
+
+#city-name {
+    font-size: 1.3rem;
+    color: #2d3a4a;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+#temperature {
+    font-size: 2rem;
+    color: #4a90e2;
+    margin-bottom: 0.3rem;
+    font-weight: 700;
+}
+
+#description {
+    font-size: 1.1rem;
+    color: #6c7a89;
+    margin-bottom: 0.5rem;
+}
+
+#error-message {
+    color: #e74c3c;
+    font-size: 1rem;
+    margin-top: 1.2rem;
+    background: #fbeee6;
+    border-radius: 6px;
+    padding: 0.7rem;
+    border: 1px solid #f5c6cb;
+    animation: shake 0.4s;
+}
+
+.hidden {
+    display: none;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px);}
+    to { opacity: 1; transform: translateY(0);}
+}
+
+@keyframes shake {
+    0% { transform: translateX(0);}
+    25% { transform: translateX(-5px);}
+    50% { transform: translateX(5px);}
+    75% { transform: translateX(-5px);}
+    100% { transform: translateX(0);} 
+}
